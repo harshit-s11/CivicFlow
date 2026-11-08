@@ -1,0 +1,968 @@
+{
+  "family_size": 6,
+  "bonferroni_alpha": 0.008333,
+  "hisc_eval_baseline": {
+    "test": {
+      "sample_size": 80,
+      "correct": 80,
+      "accuracy": 1,
+      "clopper_pearson_95_ci": [
+        0.9549,
+        1
+      ],
+      "macro_precision": 1,
+      "macro_recall": 1,
+      "macro_f1": 1,
+      "per_class": {
+        "duplicate": {
+          "support": 24,
+          "true_positives": 24,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "related": {
+          "support": 28,
+          "true_positives": 28,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "independent": {
+          "support": 28,
+          "true_positives": 28,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        }
+      },
+      "confusion_matrix": {
+        "duplicate": {
+          "duplicate": 24,
+          "related": 0,
+          "independent": 0
+        },
+        "related": {
+          "duplicate": 0,
+          "related": 28,
+          "independent": 0
+        },
+        "independent": {
+          "duplicate": 0,
+          "related": 0,
+          "independent": 28
+        }
+      }
+    },
+    "challenge": {
+      "sample_size": 150,
+      "correct": 126,
+      "accuracy": 0.84,
+      "clopper_pearson_95_ci": [
+        0.7714,
+        0.8947
+      ],
+      "macro_precision": 0.833,
+      "macro_recall": 0.8387,
+      "macro_f1": 0.8343,
+      "per_class": {
+        "duplicate": {
+          "support": 50,
+          "true_positives": 50,
+          "false_positives": 5,
+          "false_negatives": 0,
+          "precision": 0.9091,
+          "recall": 1,
+          "f1": 0.9524
+        },
+        "related": {
+          "support": 43,
+          "true_positives": 32,
+          "false_positives": 12,
+          "false_negatives": 11,
+          "precision": 0.7273,
+          "recall": 0.7442,
+          "f1": 0.7356
+        },
+        "independent": {
+          "support": 57,
+          "true_positives": 44,
+          "false_positives": 7,
+          "false_negatives": 13,
+          "precision": 0.8627,
+          "recall": 0.7719,
+          "f1": 0.8148
+        }
+      },
+      "confusion_matrix": {
+        "duplicate": {
+          "duplicate": 50,
+          "related": 0,
+          "independent": 0
+        },
+        "related": {
+          "duplicate": 4,
+          "related": 32,
+          "independent": 7
+        },
+        "independent": {
+          "duplicate": 1,
+          "related": 12,
+          "independent": 44
+        }
+      }
+    }
+  },
+  "models": {
+    "logistic_regression_5features": {
+      "model_name": "Multinomial Logistic Regression",
+      "feature_set_label": "(a) Five component scores only",
+      "best_hyperparameters": {
+        "l2": 0.001
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 92,
+        "accuracy": 0.6133,
+        "clopper_pearson_95_ci": [
+          0.5305,
+          0.6916
+        ],
+        "macro_precision": 0.7331,
+        "macro_recall": 0.6494,
+        "macro_f1": 0.5393,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 33,
+            "false_negatives": 0,
+            "precision": 0.6024,
+            "recall": 1,
+            "f1": 0.7519
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 37,
+            "false_positives": 25,
+            "false_negatives": 6,
+            "precision": 0.5968,
+            "recall": 0.8605,
+            "f1": 0.7048
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 5,
+            "false_positives": 0,
+            "false_negatives": 52,
+            "precision": 1,
+            "recall": 0.0877,
+            "f1": 0.1613
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 6,
+            "related": 37,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 27,
+            "related": 25,
+            "independent": 5
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 40,
+          "c_hisc_wrong_model_correct": 6,
+          "total_discordant": 46,
+          "p_value_raw": 3.1028037e-7,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    },
+    "logistic_regression_stacked": {
+      "model_name": "Multinomial Logistic Regression",
+      "feature_set_label": "(b) Stacked on HISC outputs",
+      "best_hyperparameters": {
+        "l2": 0.001
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 101,
+        "accuracy": 0.6733,
+        "clopper_pearson_95_ci": [
+          0.5921,
+          0.7476
+        ],
+        "macro_precision": 0.76,
+        "macro_recall": 0.7039,
+        "macro_f1": 0.6317,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 21,
+            "false_negatives": 0,
+            "precision": 0.7042,
+            "recall": 1,
+            "f1": 0.8264
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 38,
+            "false_positives": 28,
+            "false_negatives": 5,
+            "precision": 0.5758,
+            "recall": 0.8837,
+            "f1": 0.6972
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 13,
+            "false_positives": 0,
+            "false_negatives": 44,
+            "precision": 1,
+            "recall": 0.2281,
+            "f1": 0.3714
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 5,
+            "related": 38,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 16,
+            "related": 28,
+            "independent": 13
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 31,
+          "c_hisc_wrong_model_correct": 6,
+          "total_discordant": 37,
+          "p_value_raw": 0.00004125759,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    },
+    "decision_tree_depth4_5features": {
+      "model_name": "Depth-4 Decision Tree",
+      "feature_set_label": "(a) Five component scores only",
+      "best_hyperparameters": {
+        "minSamplesSplit": 2
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 105,
+        "accuracy": 0.7,
+        "clopper_pearson_95_ci": [
+          0.6199,
+          0.772
+        ],
+        "macro_precision": 0.7401,
+        "macro_recall": 0.7159,
+        "macro_f1": 0.6826,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 23,
+            "false_negatives": 0,
+            "precision": 0.6849,
+            "recall": 1,
+            "f1": 0.813
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 32,
+            "false_positives": 20,
+            "false_negatives": 11,
+            "precision": 0.6154,
+            "recall": 0.7442,
+            "f1": 0.6737
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 23,
+            "false_positives": 2,
+            "false_negatives": 34,
+            "precision": 0.92,
+            "recall": 0.4035,
+            "f1": 0.561
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 9,
+            "related": 32,
+            "independent": 2
+          },
+          "independent": {
+            "duplicate": 14,
+            "related": 20,
+            "independent": 23
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 22,
+          "c_hisc_wrong_model_correct": 1,
+          "total_discordant": 23,
+          "p_value_raw": 0.0000057220459,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    },
+    "decision_tree_depth4_stacked": {
+      "model_name": "Depth-4 Decision Tree",
+      "feature_set_label": "(b) Stacked on HISC outputs",
+      "best_hyperparameters": {
+        "minSamplesSplit": 2
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 105,
+        "accuracy": 0.7,
+        "clopper_pearson_95_ci": [
+          0.6199,
+          0.772
+        ],
+        "macro_precision": 0.7401,
+        "macro_recall": 0.7159,
+        "macro_f1": 0.6826,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 23,
+            "false_negatives": 0,
+            "precision": 0.6849,
+            "recall": 1,
+            "f1": 0.813
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 32,
+            "false_positives": 20,
+            "false_negatives": 11,
+            "precision": 0.6154,
+            "recall": 0.7442,
+            "f1": 0.6737
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 23,
+            "false_positives": 2,
+            "false_negatives": 34,
+            "precision": 0.92,
+            "recall": 0.4035,
+            "f1": 0.561
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 9,
+            "related": 32,
+            "independent": 2
+          },
+          "independent": {
+            "duplicate": 14,
+            "related": 20,
+            "independent": 23
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 22,
+          "c_hisc_wrong_model_correct": 1,
+          "total_discordant": 23,
+          "p_value_raw": 0.0000057220459,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    },
+    "gbdt_5features": {
+      "model_name": "Gradient Boosted Decision Trees",
+      "feature_set_label": "(a) Five component scores only",
+      "best_hyperparameters": {
+        "lr": 0.05,
+        "maxDepth": 2,
+        "nEstimators": 25
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 105,
+        "accuracy": 0.7,
+        "clopper_pearson_95_ci": [
+          0.6199,
+          0.772
+        ],
+        "macro_precision": 0.7401,
+        "macro_recall": 0.7159,
+        "macro_f1": 0.6826,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 23,
+            "false_negatives": 0,
+            "precision": 0.6849,
+            "recall": 1,
+            "f1": 0.813
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 32,
+            "false_positives": 20,
+            "false_negatives": 11,
+            "precision": 0.6154,
+            "recall": 0.7442,
+            "f1": 0.6737
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 23,
+            "false_positives": 2,
+            "false_negatives": 34,
+            "precision": 0.92,
+            "recall": 0.4035,
+            "f1": 0.561
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 9,
+            "related": 32,
+            "independent": 2
+          },
+          "independent": {
+            "duplicate": 14,
+            "related": 20,
+            "independent": 23
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 22,
+          "c_hisc_wrong_model_correct": 1,
+          "total_discordant": 23,
+          "p_value_raw": 0.0000057220459,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    },
+    "gbdt_stacked": {
+      "model_name": "Gradient Boosted Decision Trees",
+      "feature_set_label": "(b) Stacked on HISC outputs",
+      "best_hyperparameters": {
+        "lr": 0.05,
+        "maxDepth": 2,
+        "nEstimators": 25
+      },
+      "tuning_oof_macro_f1": 1,
+      "test": {
+        "sample_size": 80,
+        "correct": 80,
+        "accuracy": 1,
+        "clopper_pearson_95_ci": [
+          0.9549,
+          1
+        ],
+        "macro_precision": 1,
+        "macro_recall": 1,
+        "macro_f1": 1,
+        "per_class": {
+          "duplicate": {
+            "support": 24,
+            "true_positives": 24,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "related": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "independent": {
+            "support": 28,
+            "true_positives": 28,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 24,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 0,
+            "related": 28,
+            "independent": 0
+          },
+          "independent": {
+            "duplicate": 0,
+            "related": 0,
+            "independent": 28
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 0,
+          "c_hisc_wrong_model_correct": 0,
+          "total_discordant": 0,
+          "p_value_raw": 1,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": false
+        }
+      },
+      "challenge": {
+        "sample_size": 150,
+        "correct": 105,
+        "accuracy": 0.7,
+        "clopper_pearson_95_ci": [
+          0.6199,
+          0.772
+        ],
+        "macro_precision": 0.7401,
+        "macro_recall": 0.7159,
+        "macro_f1": 0.6826,
+        "per_class": {
+          "duplicate": {
+            "support": 50,
+            "true_positives": 50,
+            "false_positives": 23,
+            "false_negatives": 0,
+            "precision": 0.6849,
+            "recall": 1,
+            "f1": 0.813
+          },
+          "related": {
+            "support": 43,
+            "true_positives": 32,
+            "false_positives": 20,
+            "false_negatives": 11,
+            "precision": 0.6154,
+            "recall": 0.7442,
+            "f1": 0.6737
+          },
+          "independent": {
+            "support": 57,
+            "true_positives": 23,
+            "false_positives": 2,
+            "false_negatives": 34,
+            "precision": 0.92,
+            "recall": 0.4035,
+            "f1": 0.561
+          }
+        },
+        "confusion_matrix": {
+          "duplicate": {
+            "duplicate": 50,
+            "related": 0,
+            "independent": 0
+          },
+          "related": {
+            "duplicate": 9,
+            "related": 32,
+            "independent": 2
+          },
+          "independent": {
+            "duplicate": 14,
+            "related": 20,
+            "independent": 23
+          }
+        },
+        "mcnemar_vs_hisc": {
+          "b_hisc_correct_model_wrong": 22,
+          "c_hisc_wrong_model_correct": 1,
+          "total_discordant": 23,
+          "p_value_raw": 0.0000057220459,
+          "bonferroni_threshold": 0.008333,
+          "statistically_significant": true
+        }
+      }
+    }
+  }
+}

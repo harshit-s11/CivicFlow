@@ -1,0 +1,374 @@
+{
+  "test_suite": {
+    "total_tests": {
+      "value": 258,
+      "source_file": "test-runner-output",
+      "script": "npm test"
+    },
+    "total_suites": {
+      "value": 116,
+      "source_file": "test-runner-output",
+      "script": "npm test"
+    },
+    "failing_tests": {
+      "value": 0,
+      "source_file": "test-runner-output",
+      "script": "npm test"
+    }
+  },
+  "evaluation_freeze": {
+    "commit_hash": {
+      "value": "327a4fcdbbda3f44492304871bbfbd3b8ab3c366",
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "split_seed": {
+      "value": 42,
+      "source_file": "splits.json",
+      "script": "makeSplits.js"
+    },
+    "development_pairs_count": {
+      "value": 400,
+      "source_file": "civicflow_400_labeled_complaint_pairs.csv",
+      "script": "extractFeatureTable.js"
+    },
+    "challenge_pairs_count": {
+      "value": 150,
+      "source_file": "synthetic_challenge_set_150.csv",
+      "script": "generateChallengeSet.js"
+    },
+    "total_evaluation_pairs": {
+      "value": 550,
+      "source_file": "civicflow_evaluation_release_550_pairs.csv",
+      "script": "exportReleaseCsv.js"
+    }
+  },
+  "dataset_checksums": {
+    "csv_400_checked_out_crlf": {
+      "value": "b4653ac507f422a3b6f5ffadb291d5440eab0cb07174f2398ad72739e86a33f2",
+      "source_file": "checksum_report.md",
+      "script": "extractFeatureTable.js"
+    },
+    "csv_400_normalized_lf": {
+      "value": "b418a79a18925ed354093ca4805941cbd455adce654f411c673da996c6074e3c",
+      "source_file": "checksum_report.md",
+      "script": "extractFeatureTable.js"
+    },
+    "csv_150_sha256": {
+      "value": "2774c8e133bbc2344c290dd27c52752be7d5137899a369316836e99ca9d8e89b",
+      "source_file": "checksum_report.md",
+      "script": "generateChallengeSet.js"
+    },
+    "splits_sha256": {
+      "value": "58039b02ac69bdc78e220e0d979e1e28aa7c6fcdfb0e30595a5082b53bd4a06a",
+      "source_file": "checksum_report.md",
+      "script": "makeSplits.js"
+    }
+  },
+  "dataset_leakage_audit": {
+    "test_distinct_texts_in_train_pct": {
+      "value": 84.6,
+      "source_file": "dataset_leakage_audit.json",
+      "script": "datasetLeakageAudit.js"
+    },
+    "test_pairs_repeating_train_template_pct": {
+      "value": 71.25,
+      "source_file": "dataset_leakage_audit.json",
+      "script": "datasetLeakageAudit.js"
+    }
+  },
+  "main_held_out_test_results": {
+    "sample_size": {
+      "value": 80,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_accuracy": {
+      "value": 1,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_macro_f1": {
+      "value": 1,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_correct_count": {
+      "value": 80,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    }
+  },
+  "synthetic_challenge_set_results": {
+    "sample_size": {
+      "value": 150,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_accuracy": {
+      "value": 0.84,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_macro_f1": {
+      "value": 0.8343,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "runFinalEvaluationFreeze.js"
+    },
+    "HISC_correct_count": {
+      "value": 126,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B1_jaccard_correct_count": {
+      "value": 35,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B2_distance_correct_count": {
+      "value": 73,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B3_cat_distance_correct_count": {
+      "value": 85,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B4_tfidf_correct_count": {
+      "value": 51,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B5_tfidf_distance_correct_count": {
+      "value": 53,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "B6_embedding_correct_count": {
+      "value": 43,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "HISC_embed_correct_count": {
+      "value": 120,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    },
+    "HISC_learned_weights_correct_count": {
+      "value": 126,
+      "source_file": "final_held_out_evaluation.json",
+      "script": "repairCategoryMarkdown.js"
+    }
+  },
+  "learned_machine_learning_baselines": {
+    "bonferroni_significance_cutoff": {
+      "value": 0.008333,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "logistic_regression_5features_test_acc": {
+      "value": 1,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "logistic_regression_5features_chal_acc": {
+      "value": 0.6133,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "logistic_regression_5features_mcnemar_p": {
+      "value": 3.1028037e-7,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "logistic_regression_stacked_chal_acc": {
+      "value": 0.6733,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "logistic_regression_stacked_mcnemar_p": {
+      "value": 0.00004125759,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "decision_tree_depth4_chal_acc": {
+      "value": 0.7,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "decision_tree_depth4_mcnemar_p": {
+      "value": 0.0000057220459,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "decision_tree_stacked_chal_acc": {
+      "value": 0.7,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "decision_tree_stacked_mcnemar_p": {
+      "value": 0.0000057220459,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "gbdt_5features_chal_acc": {
+      "value": 0.7,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "gbdt_5features_mcnemar_p": {
+      "value": 0.0000057220459,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "gbdt_stacked_chal_acc": {
+      "value": 0.7,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    },
+    "gbdt_stacked_mcnemar_p": {
+      "value": 0.0000057220459,
+      "source_file": "learned_baselines_summary.json",
+      "script": "runLearnedBaselines.js"
+    }
+  },
+  "cluster_level_sanity_check": {
+    "label": {
+      "value": "SANITY CHECK ON DESIGNED DATA, NOT INDEPENDENT EVIDENCE",
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "total_complaints": {
+      "value": 120,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "ground_truth_clusters": {
+      "value": 11,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "singletons": {
+      "value": 90,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "baseline_pairwise_f1": {
+      "value": 0.2082,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "baseline_bcubed_f1": {
+      "value": 0.5601,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "monte_carlo_100_runs_bcubed_f1_mean": {
+      "value": 0.5658,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    },
+    "monte_carlo_100_runs_bcubed_f1_std": {
+      "value": 0.0212,
+      "source_file": "cluster_level_evaluation.json",
+      "script": "clusterLevelBenchmark.js"
+    }
+  },
+  "blind_inter_annotator_reliability": {
+    "status": {
+      "value": "MOCK_EXCLUDED_PENDING_HUMAN_RATING",
+      "source_file": "sample_manifest_with_keys.json",
+      "script": "generateBlindKit.js"
+    },
+    "sample_size": {
+      "value": 100,
+      "source_file": "blind_annotation_100_pairs.csv",
+      "script": "generateBlindKit.js"
+    },
+    "notice": {
+      "value": "Mock demo values (kappa=0.9399, accuracy=100%) excluded from canonical paper numbers pending independent human rating",
+      "source_file": "ANNOTATION_GUIDELINES.md",
+      "script": "evaluateBlindAnnotation.js"
+    }
+  },
+  "scoring_microbenchmark": {
+    "evaluation_preset_mean_latency_us": {
+      "value": 450.059,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "evaluation_preset_p50_us": {
+      "value": 375,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "evaluation_preset_p95_us": {
+      "value": 768.2,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "evaluation_preset_p99_us": {
+      "value": 1047.4,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "evaluation_preset_throughput_pairs_sec": {
+      "value": 2221.9,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "deployed_preset_mean_latency_us": {
+      "value": 410.154,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "deployed_preset_p50_us": {
+      "value": 353.5,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "deployed_preset_p95_us": {
+      "value": 725.3,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "deployed_preset_p99_us": {
+      "value": 1030.4,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    },
+    "deployed_preset_throughput_pairs_sec": {
+      "value": 2438.1,
+      "source_file": "scoring_microbenchmark.json",
+      "script": "scoringMicrobenchmark.js"
+    }
+  },
+  "geospatial_query_speedups": {
+    "scale_1k_speedup": {
+      "value": 1.52,
+      "source_file": "spatial_query_benchmark.json",
+      "script": "spatialQueryBenchmark.js"
+    },
+    "scale_10k_speedup": {
+      "value": 2.85,
+      "source_file": "spatial_query_benchmark.json",
+      "script": "spatialQueryBenchmark.js"
+    },
+    "scale_50k_speedup": {
+      "value": 3.4,
+      "source_file": "spatial_query_benchmark.json",
+      "script": "spatialQueryBenchmark.js"
+    },
+    "benchmark_repetitions": {
+      "value": 25,
+      "source_file": "spatial_query_benchmark.json",
+      "script": "spatialQueryBenchmark.js"
+    },
+    "warmup_runs": {
+      "value": 5,
+      "source_file": "spatial_query_benchmark.json",
+      "script": "spatialQueryBenchmark.js"
+    }
+  }
+}

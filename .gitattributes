@@ -1,0 +1,6 @@
+# Enforce LF line endings strictly on data, results, and document files
+BACKEND/data/** text eol=lf
+BACKEND/results/** text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf

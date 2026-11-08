@@ -1,0 +1,821 @@
+{
+  "challenge_sample_size": 150,
+  "categories_count": 10,
+  "categories": [
+    "Paraphrases with Novel Vocabulary",
+    "Typos and Spelling Variations",
+    "Tanglish and Colloquial Phrasing",
+    "Very Short and Vague Descriptions",
+    "Same Location, Different Issue",
+    "Same Issue, Geographically Distant",
+    "Temporally Distant at Same Location",
+    "Similar Wording, Distinct Incidents",
+    "Cascading Related Failures",
+    "True Duplicates with Disparate Phrasing"
+  ],
+  "category_totals": {
+    "Paraphrases with Novel Vocabulary": 15,
+    "Typos and Spelling Variations": 15,
+    "Tanglish and Colloquial Phrasing": 15,
+    "Very Short and Vague Descriptions": 15,
+    "Same Location, Different Issue": 15,
+    "Same Issue, Geographically Distant": 15,
+    "Temporally Distant at Same Location": 10,
+    "Similar Wording, Distinct Incidents": 13,
+    "Cascading Related Failures": 15,
+    "True Duplicates with Disparate Phrasing": 22
+  },
+  "method_summaries": {
+    "HISC": {
+      "label": "HISC (Eval)",
+      "total_correct": 126,
+      "total_sample": 150,
+      "accuracy": 0.84,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 15,
+        "Typos and Spelling Variations": 15,
+        "Tanglish and Colloquial Phrasing": 15,
+        "Very Short and Vague Descriptions": 11,
+        "Same Location, Different Issue": 9,
+        "Same Issue, Geographically Distant": 14,
+        "Temporally Distant at Same Location": 5,
+        "Similar Wording, Distinct Incidents": 5,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 22
+      }
+    },
+    "B1_jaccard": {
+      "label": "B1 (Jaccard)",
+      "total_correct": 35,
+      "total_sample": 150,
+      "accuracy": 0.2333,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 3,
+        "Typos and Spelling Variations": 5,
+        "Tanglish and Colloquial Phrasing": 4,
+        "Very Short and Vague Descriptions": 2,
+        "Same Location, Different Issue": 3,
+        "Same Issue, Geographically Distant": 3,
+        "Temporally Distant at Same Location": 3,
+        "Similar Wording, Distinct Incidents": 2,
+        "Cascading Related Failures": 8,
+        "True Duplicates with Disparate Phrasing": 2
+      }
+    },
+    "B2_distance": {
+      "label": "B2 (Distance)",
+      "total_correct": 73,
+      "total_sample": 150,
+      "accuracy": 0.4867,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 10,
+        "Typos and Spelling Variations": 9,
+        "Tanglish and Colloquial Phrasing": 10,
+        "Very Short and Vague Descriptions": 9,
+        "Same Issue, Geographically Distant": 13,
+        "True Duplicates with Disparate Phrasing": 22
+      }
+    },
+    "B3_cat_distance": {
+      "label": "B3 (Cat+Dist)",
+      "total_correct": 85,
+      "total_sample": 150,
+      "accuracy": 0.5667,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 11,
+        "Typos and Spelling Variations": 11,
+        "Tanglish and Colloquial Phrasing": 12,
+        "Very Short and Vague Descriptions": 7,
+        "Same Location, Different Issue": 5,
+        "Same Issue, Geographically Distant": 2,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 22
+      }
+    },
+    "B4_tfidf": {
+      "label": "B4 (TF-IDF)",
+      "total_correct": 51,
+      "total_sample": 150,
+      "accuracy": 0.34,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 6,
+        "Typos and Spelling Variations": 7,
+        "Tanglish and Colloquial Phrasing": 9,
+        "Very Short and Vague Descriptions": 8,
+        "Same Location, Different Issue": 2,
+        "Same Issue, Geographically Distant": 2,
+        "Temporally Distant at Same Location": 4,
+        "Cascading Related Failures": 2,
+        "True Duplicates with Disparate Phrasing": 11
+      }
+    },
+    "B5_tfidf_distance": {
+      "label": "B5 (TF-IDF+Dist)",
+      "total_correct": 53,
+      "total_sample": 150,
+      "accuracy": 0.3533,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 11,
+        "Typos and Spelling Variations": 8,
+        "Tanglish and Colloquial Phrasing": 10,
+        "Very Short and Vague Descriptions": 5,
+        "Same Location, Different Issue": 2,
+        "Same Issue, Geographically Distant": 3,
+        "Temporally Distant at Same Location": 2,
+        "Cascading Related Failures": 1,
+        "True Duplicates with Disparate Phrasing": 11
+      }
+    },
+    "B6_embedding": {
+      "label": "B6 (Embedding)",
+      "total_correct": 43,
+      "total_sample": 150,
+      "accuracy": 0.2867,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 7,
+        "Typos and Spelling Variations": 8,
+        "Tanglish and Colloquial Phrasing": 5,
+        "Very Short and Vague Descriptions": 4,
+        "Same Location, Different Issue": 4,
+        "Same Issue, Geographically Distant": 1,
+        "Temporally Distant at Same Location": 3,
+        "Cascading Related Failures": 9,
+        "True Duplicates with Disparate Phrasing": 2
+      }
+    },
+    "HISC_embed": {
+      "label": "HISC-embed",
+      "total_correct": 120,
+      "total_sample": 150,
+      "accuracy": 0.8,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 15,
+        "Typos and Spelling Variations": 14,
+        "Tanglish and Colloquial Phrasing": 12,
+        "Very Short and Vague Descriptions": 11,
+        "Same Location, Different Issue": 9,
+        "Same Issue, Geographically Distant": 13,
+        "Temporally Distant at Same Location": 5,
+        "Similar Wording, Distinct Incidents": 5,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 21
+      }
+    },
+    "HISC_hybrid_mean": {
+      "label": "HISC-hybrid-mean",
+      "total_correct": 120,
+      "total_sample": 150,
+      "accuracy": 0.8,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 14,
+        "Typos and Spelling Variations": 15,
+        "Tanglish and Colloquial Phrasing": 12,
+        "Very Short and Vague Descriptions": 11,
+        "Same Location, Different Issue": 9,
+        "Same Issue, Geographically Distant": 13,
+        "Temporally Distant at Same Location": 5,
+        "Similar Wording, Distinct Incidents": 5,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 21
+      }
+    },
+    "HISC_hybrid_max": {
+      "label": "HISC-hybrid-max",
+      "total_correct": 120,
+      "total_sample": 150,
+      "accuracy": 0.8,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 15,
+        "Typos and Spelling Variations": 14,
+        "Tanglish and Colloquial Phrasing": 12,
+        "Very Short and Vague Descriptions": 11,
+        "Same Location, Different Issue": 9,
+        "Same Issue, Geographically Distant": 13,
+        "Temporally Distant at Same Location": 5,
+        "Similar Wording, Distinct Incidents": 5,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 21
+      }
+    },
+    "HISC_learned_weights": {
+      "label": "HISC-learned-weights",
+      "total_correct": 126,
+      "total_sample": 150,
+      "accuracy": 0.84,
+      "per_category_correct": {
+        "Paraphrases with Novel Vocabulary": 15,
+        "Typos and Spelling Variations": 15,
+        "Tanglish and Colloquial Phrasing": 15,
+        "Very Short and Vague Descriptions": 11,
+        "Same Location, Different Issue": 9,
+        "Same Issue, Geographically Distant": 14,
+        "Temporally Distant at Same Location": 5,
+        "Similar Wording, Distinct Incidents": 5,
+        "Cascading Related Failures": 15,
+        "True Duplicates with Disparate Phrasing": 22
+      }
+    }
+  },
+  "category_breakdown": {
+    "Paraphrases with Novel Vocabulary": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "B1_jaccard": {
+          "correct": 3,
+          "total": 15,
+          "accuracy": 0.2
+        },
+        "B2_distance": {
+          "correct": 10,
+          "total": 15,
+          "accuracy": 0.6667
+        },
+        "B3_cat_distance": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "B4_tfidf": {
+          "correct": 6,
+          "total": 15,
+          "accuracy": 0.4
+        },
+        "B5_tfidf_distance": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "B6_embedding": {
+          "correct": 7,
+          "total": 15,
+          "accuracy": 0.4667
+        },
+        "HISC_embed": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_hybrid_mean": {
+          "correct": 14,
+          "total": 15,
+          "accuracy": 0.9333
+        },
+        "HISC_hybrid_max": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_learned_weights": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        }
+      }
+    },
+    "Typos and Spelling Variations": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "B1_jaccard": {
+          "correct": 5,
+          "total": 15,
+          "accuracy": 0.3333
+        },
+        "B2_distance": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "B3_cat_distance": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "B4_tfidf": {
+          "correct": 7,
+          "total": 15,
+          "accuracy": 0.4667
+        },
+        "B5_tfidf_distance": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.5333
+        },
+        "B6_embedding": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.5333
+        },
+        "HISC_embed": {
+          "correct": 14,
+          "total": 15,
+          "accuracy": 0.9333
+        },
+        "HISC_hybrid_mean": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_hybrid_max": {
+          "correct": 14,
+          "total": 15,
+          "accuracy": 0.9333
+        },
+        "HISC_learned_weights": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        }
+      }
+    },
+    "Tanglish and Colloquial Phrasing": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "B1_jaccard": {
+          "correct": 4,
+          "total": 15,
+          "accuracy": 0.2667
+        },
+        "B2_distance": {
+          "correct": 10,
+          "total": 15,
+          "accuracy": 0.6667
+        },
+        "B3_cat_distance": {
+          "correct": 12,
+          "total": 15,
+          "accuracy": 0.8
+        },
+        "B4_tfidf": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "B5_tfidf_distance": {
+          "correct": 10,
+          "total": 15,
+          "accuracy": 0.6667
+        },
+        "B6_embedding": {
+          "correct": 5,
+          "total": 15,
+          "accuracy": 0.3333
+        },
+        "HISC_embed": {
+          "correct": 12,
+          "total": 15,
+          "accuracy": 0.8
+        },
+        "HISC_hybrid_mean": {
+          "correct": 12,
+          "total": 15,
+          "accuracy": 0.8
+        },
+        "HISC_hybrid_max": {
+          "correct": 12,
+          "total": 15,
+          "accuracy": 0.8
+        },
+        "HISC_learned_weights": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        }
+      }
+    },
+    "Very Short and Vague Descriptions": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "B1_jaccard": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B2_distance": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "B3_cat_distance": {
+          "correct": 7,
+          "total": 15,
+          "accuracy": 0.4667
+        },
+        "B4_tfidf": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.5333
+        },
+        "B5_tfidf_distance": {
+          "correct": 5,
+          "total": 15,
+          "accuracy": 0.3333
+        },
+        "B6_embedding": {
+          "correct": 4,
+          "total": 15,
+          "accuracy": 0.2667
+        },
+        "HISC_embed": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "HISC_hybrid_mean": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "HISC_hybrid_max": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        },
+        "HISC_learned_weights": {
+          "correct": 11,
+          "total": 15,
+          "accuracy": 0.7333
+        }
+      }
+    },
+    "Same Location, Different Issue": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "B1_jaccard": {
+          "correct": 3,
+          "total": 15,
+          "accuracy": 0.2
+        },
+        "B2_distance": {
+          "correct": 0,
+          "total": 15,
+          "accuracy": 0
+        },
+        "B3_cat_distance": {
+          "correct": 5,
+          "total": 15,
+          "accuracy": 0.3333
+        },
+        "B4_tfidf": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B5_tfidf_distance": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B6_embedding": {
+          "correct": 4,
+          "total": 15,
+          "accuracy": 0.2667
+        },
+        "HISC_embed": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "HISC_hybrid_mean": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "HISC_hybrid_max": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "HISC_learned_weights": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        }
+      }
+    },
+    "Same Issue, Geographically Distant": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 14,
+          "total": 15,
+          "accuracy": 0.9333
+        },
+        "B1_jaccard": {
+          "correct": 3,
+          "total": 15,
+          "accuracy": 0.2
+        },
+        "B2_distance": {
+          "correct": 13,
+          "total": 15,
+          "accuracy": 0.8667
+        },
+        "B3_cat_distance": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B4_tfidf": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B5_tfidf_distance": {
+          "correct": 3,
+          "total": 15,
+          "accuracy": 0.2
+        },
+        "B6_embedding": {
+          "correct": 1,
+          "total": 15,
+          "accuracy": 0.0667
+        },
+        "HISC_embed": {
+          "correct": 13,
+          "total": 15,
+          "accuracy": 0.8667
+        },
+        "HISC_hybrid_mean": {
+          "correct": 13,
+          "total": 15,
+          "accuracy": 0.8667
+        },
+        "HISC_hybrid_max": {
+          "correct": 13,
+          "total": 15,
+          "accuracy": 0.8667
+        },
+        "HISC_learned_weights": {
+          "correct": 14,
+          "total": 15,
+          "accuracy": 0.9333
+        }
+      }
+    },
+    "Temporally Distant at Same Location": {
+      "total_pairs": 10,
+      "methods": {
+        "HISC": {
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
+        },
+        "B1_jaccard": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3
+        },
+        "B2_distance": {
+          "correct": 0,
+          "total": 10,
+          "accuracy": 0
+        },
+        "B3_cat_distance": {
+          "correct": 0,
+          "total": 10,
+          "accuracy": 0
+        },
+        "B4_tfidf": {
+          "correct": 4,
+          "total": 10,
+          "accuracy": 0.4
+        },
+        "B5_tfidf_distance": {
+          "correct": 2,
+          "total": 10,
+          "accuracy": 0.2
+        },
+        "B6_embedding": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3
+        },
+        "HISC_embed": {
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
+        },
+        "HISC_hybrid_mean": {
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
+        },
+        "HISC_hybrid_max": {
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
+        },
+        "HISC_learned_weights": {
+          "correct": 5,
+          "total": 10,
+          "accuracy": 0.5
+        }
+      }
+    },
+    "Similar Wording, Distinct Incidents": {
+      "total_pairs": 13,
+      "methods": {
+        "HISC": {
+          "correct": 5,
+          "total": 13,
+          "accuracy": 0.3846
+        },
+        "B1_jaccard": {
+          "correct": 2,
+          "total": 13,
+          "accuracy": 0.1538
+        },
+        "B2_distance": {
+          "correct": 0,
+          "total": 13,
+          "accuracy": 0
+        },
+        "B3_cat_distance": {
+          "correct": 0,
+          "total": 13,
+          "accuracy": 0
+        },
+        "B4_tfidf": {
+          "correct": 0,
+          "total": 13,
+          "accuracy": 0
+        },
+        "B5_tfidf_distance": {
+          "correct": 0,
+          "total": 13,
+          "accuracy": 0
+        },
+        "B6_embedding": {
+          "correct": 0,
+          "total": 13,
+          "accuracy": 0
+        },
+        "HISC_embed": {
+          "correct": 5,
+          "total": 13,
+          "accuracy": 0.3846
+        },
+        "HISC_hybrid_mean": {
+          "correct": 5,
+          "total": 13,
+          "accuracy": 0.3846
+        },
+        "HISC_hybrid_max": {
+          "correct": 5,
+          "total": 13,
+          "accuracy": 0.3846
+        },
+        "HISC_learned_weights": {
+          "correct": 5,
+          "total": 13,
+          "accuracy": 0.3846
+        }
+      }
+    },
+    "Cascading Related Failures": {
+      "total_pairs": 15,
+      "methods": {
+        "HISC": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "B1_jaccard": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.5333
+        },
+        "B2_distance": {
+          "correct": 0,
+          "total": 15,
+          "accuracy": 0
+        },
+        "B3_cat_distance": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "B4_tfidf": {
+          "correct": 2,
+          "total": 15,
+          "accuracy": 0.1333
+        },
+        "B5_tfidf_distance": {
+          "correct": 1,
+          "total": 15,
+          "accuracy": 0.0667
+        },
+        "B6_embedding": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "HISC_embed": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_hybrid_mean": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_hybrid_max": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        },
+        "HISC_learned_weights": {
+          "correct": 15,
+          "total": 15,
+          "accuracy": 1
+        }
+      }
+    },
+    "True Duplicates with Disparate Phrasing": {
+      "total_pairs": 22,
+      "methods": {
+        "HISC": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 1
+        },
+        "B1_jaccard": {
+          "correct": 2,
+          "total": 22,
+          "accuracy": 0.0909
+        },
+        "B2_distance": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 1
+        },
+        "B3_cat_distance": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 1
+        },
+        "B4_tfidf": {
+          "correct": 11,
+          "total": 22,
+          "accuracy": 0.5
+        },
+        "B5_tfidf_distance": {
+          "correct": 11,
+          "total": 22,
+          "accuracy": 0.5
+        },
+        "B6_embedding": {
+          "correct": 2,
+          "total": 22,
+          "accuracy": 0.0909
+        },
+        "HISC_embed": {
+          "correct": 21,
+          "total": 22,
+          "accuracy": 0.9545
+        },
+        "HISC_hybrid_mean": {
+          "correct": 21,
+          "total": 22,
+          "accuracy": 0.9545
+        },
+        "HISC_hybrid_max": {
+          "correct": 21,
+          "total": 22,
+          "accuracy": 0.9545
+        },
+        "HISC_learned_weights": {
+          "correct": 22,
+          "total": 22,
+          "accuracy": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "cpu": {
+    "model": "AMD Ryzen 5 5600H with Radeon Graphics         ",
+    "speed_mhz": 3294,
+    "cores_physical": 6,
+    "cores_logical": 12
+  },
+  "memory": {
+    "total_gb": 7.88,
+    "free_gb": 1.15
+  },
+  "os": {
+    "platform": "win32",
+    "type": "Windows_NT",
+    "release": "10.0.26300",
+    "arch": "x64"
+  },
+  "runtime": {
+    "node_version": "v22.16.0",
+    "v8_version": "12.4.254.21-node.26"
+  },
+  "database": {
+    "mongodb_version": "8.3.11",
+    "mongoose_version": "9.9.4"
+  }
+}
