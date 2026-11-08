@@ -4,3 +4,6 @@ BACKEND/results/** text eol=lf
 *.csv text eol=lf
 *.json text eol=lf
 *.md text eol=lf
+
+# Preserve the immutable source dataset byte-for-byte
+/civicflow_400_labeled_complaint_pairs.csv -text
